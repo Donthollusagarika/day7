@@ -1,0 +1,27 @@
+<html>
+<body>
+    <h2>JavaScript HTML DOM</h2>
+        <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+        <form id="frm1"action="">
+            Frist name: <input type="text" name="fname"value="Sagarika"><br>
+            Last name: <input type="text" name="iname"value="mani"><br><br>
+            <input type="submit" value="submit">
+        </form>
+        <form id="frm2"action="">
+            Frist name: <input type="text" name="fname"value="Sagarika"><br>
+            Last name: <input type="text" name="iname" value="donthollu"><br><br>
+             <input type="submit" value="submit">
+            </form>
+    <p>These are the values of each element in the form:</p>
+        <p id="demo"></p>
+        <script>
+        const x = document.forms["frm1"];
+        let text ="";
+        for(let i =0;i< x.length;i++){
+            text +=x.elements[i].value +"<br>";
+        }
+        document.getElementById("demo").innerHTML =text;
+        </script>
+        </body>
+        </html>
+        
